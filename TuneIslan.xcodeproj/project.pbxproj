@@ -13,6 +13,9 @@
 		B03927632EC4E53100FDB6B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B03927622EC4E53100FDB6B4 /* Preview Assets.xcassets */; };
 		B03927652EC4E53100FDB6B4 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03927642EC4E53100FDB6B4 /* Persistence.swift */; };
 		B03927682EC4E53100FDB6B4 /* TuneIslan.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B03927662EC4E53100FDB6B4 /* TuneIslan.xcdatamodeld */; };
+		B039277D2EC4EF7700FDB6B4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B039277C2EC4EF7700FDB6B4 /* SplashView.swift */; };
+		B039277F2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B039277E2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift */; };
+		B03927812EC4F07600FDB6B4 /* LevelSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03927802EC4F07600FDB6B4 /* LevelSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		B03927622EC4E53100FDB6B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B03927642EC4E53100FDB6B4 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B03927672EC4E53100FDB6B4 /* TuneIslan.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TuneIslan.xcdatamodel; sourceTree = "<group>"; };
+		B039277C2EC4EF7700FDB6B4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		B039277E2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionViewModel.swift; sourceTree = "<group>"; };
+		B03927802EC4F07600FDB6B4 /* LevelSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 		B039275A2EC4E53000FDB6B4 /* TuneIslan */ = {
 			isa = PBXGroup;
 			children = (
+				B03927742EC4EE1500FDB6B4 /* Utilities */,
+				B03927732EC4EE0E00FDB6B4 /* Core */,
+				B03927722EC4EE0100FDB6B4 /* Features */,
 				B039275B2EC4E53000FDB6B4 /* TuneIslanApp.swift */,
 				B039275D2EC4E53000FDB6B4 /* ContentView.swift */,
 				B039275F2EC4E53100FDB6B4 /* Assets.xcassets */,
@@ -71,6 +80,86 @@
 				B03927622EC4E53100FDB6B4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B03927722EC4EE0100FDB6B4 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				B03927772EC4EE9C00FDB6B4 /* Piano */,
+				B03927762EC4EE8C00FDB6B4 /* LevelSelection */,
+				B03927752EC4EE2F00FDB6B4 /* Splash */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		B03927732EC4EE0E00FDB6B4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B03927742EC4EE1500FDB6B4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B03927752EC4EE2F00FDB6B4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				B039277C2EC4EF7700FDB6B4 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		B03927762EC4EE8C00FDB6B4 /* LevelSelection */ = {
+			isa = PBXGroup;
+			children = (
+				B03927792EC4EEC000FDB6B4 /* ViewModels */,
+				B03927782EC4EEB300FDB6B4 /* Views */,
+			);
+			path = LevelSelection;
+			sourceTree = "<group>";
+		};
+		B03927772EC4EE9C00FDB6B4 /* Piano */ = {
+			isa = PBXGroup;
+			children = (
+				B039277B2EC4EEE200FDB6B4 /* ViewModels */,
+				B039277A2EC4EED100FDB6B4 /* Views */,
+			);
+			path = Piano;
+			sourceTree = "<group>";
+		};
+		B03927782EC4EEB300FDB6B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B03927802EC4F07600FDB6B4 /* LevelSelectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B03927792EC4EEC000FDB6B4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B039277E2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B039277A2EC4EED100FDB6B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B039277B2EC4EEE200FDB6B4 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B03927812EC4F07600FDB6B4 /* LevelSelectionView.swift in Sources */,
 				B03927652EC4E53100FDB6B4 /* Persistence.swift in Sources */,
 				B03927682EC4E53100FDB6B4 /* TuneIslan.xcdatamodeld in Sources */,
+				B039277F2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift in Sources */,
+				B039277D2EC4EF7700FDB6B4 /* SplashView.swift in Sources */,
 				B039275E2EC4E53000FDB6B4 /* ContentView.swift in Sources */,
 				B039275C2EC4E53000FDB6B4 /* TuneIslanApp.swift in Sources */,
 			);
@@ -280,8 +372,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,8 +399,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
