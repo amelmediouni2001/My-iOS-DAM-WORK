@@ -33,7 +33,7 @@ struct PianoKeyboardView_Previews: PreviewProvider {
     static var previews: some View {
         let testKeys = [
             PianoKey(note: "Do", octave: 4, type: .white, frequency: 261.63, color: Color.red),
-            PianoKey(note: "Ré", octave: 4, type: .white, frequency: 293.66, color: Color.orange),
+            PianoKey(note: "Re", octave: 4, type: .white, frequency: 293.66, color: Color.orange),
             PianoKey(note: "Mi", octave: 4, type: .white, frequency: 329.63, color: Color.yellow),
             PianoKey(note: "Fa", octave: 4, type: .white, frequency: 349.23, color: Color.green),
             PianoKey(note: "Sol", octave: 4, type: .white, frequency: 392.00, color: Color.cyan),

@@ -67,22 +67,3 @@ struct PianoKeyView: View {
     }
 }
 
-// Preview
-struct PianoKeyView_Previews: PreviewProvider {
-    static var previews: some View {
-        PianoKeyView(
-            key: PianoKey(
-                note: "Do",
-                octave: 4,
-                type: .white,
-                frequency: 261.63,
-                color: Color.red
-            ),
-            action: {
-                print("Do pressed!")
-            }
-        )
-        .padding()
-        .background(Color.gray.opacity(0.2))
-    }
-}
