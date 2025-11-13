@@ -16,6 +16,12 @@
 		B039277D2EC4EF7700FDB6B4 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B039277C2EC4EF7700FDB6B4 /* SplashView.swift */; };
 		B039277F2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B039277E2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift */; };
 		B03927812EC4F07600FDB6B4 /* LevelSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03927802EC4F07600FDB6B4 /* LevelSelectionView.swift */; };
+		B051A6382EC6161C001BEB0E /* PianoKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051A6372EC6161C001BEB0E /* PianoKey.swift */; };
+		B051A63A2EC61646001BEB0E /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051A6392EC61646001BEB0E /* SoundGenerator.swift */; };
+		B051A6402EC616C6001BEB0E /* PianoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051A63F2EC616C6001BEB0E /* PianoViewModel.swift */; };
+		B051A6422EC61726001BEB0E /* PianoKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051A6412EC61726001BEB0E /* PianoKeyView.swift */; };
+		B051A6442EC61762001BEB0E /* PianoKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051A6432EC61762001BEB0E /* PianoKeyboardView.swift */; };
+		B051A6462EC617B6001BEB0E /* PianoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B051A6452EC617B6001BEB0E /* PianoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		B039277C2EC4EF7700FDB6B4 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		B039277E2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionViewModel.swift; sourceTree = "<group>"; };
 		B03927802EC4F07600FDB6B4 /* LevelSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelSelectionView.swift; sourceTree = "<group>"; };
+		B051A6372EC6161C001BEB0E /* PianoKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKey.swift; sourceTree = "<group>"; };
+		B051A6392EC61646001BEB0E /* SoundGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundGenerator.swift; sourceTree = "<group>"; };
+		B051A63F2EC616C6001BEB0E /* PianoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoViewModel.swift; sourceTree = "<group>"; };
+		B051A6412EC61726001BEB0E /* PianoKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKeyView.swift; sourceTree = "<group>"; };
+		B051A6432EC61762001BEB0E /* PianoKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoKeyboardView.swift; sourceTree = "<group>"; };
+		B051A6452EC617B6001BEB0E /* PianoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PianoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +138,7 @@
 		B03927772EC4EE9C00FDB6B4 /* Piano */ = {
 			isa = PBXGroup;
 			children = (
+				B051A6362EC615ED001BEB0E /* Models */,
 				B039277B2EC4EEE200FDB6B4 /* ViewModels */,
 				B039277A2EC4EED100FDB6B4 /* Views */,
 			);
@@ -151,6 +164,8 @@
 		B039277A2EC4EED100FDB6B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B051A6432EC61762001BEB0E /* PianoKeyboardView.swift */,
+				B051A6452EC617B6001BEB0E /* PianoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,8 +173,19 @@
 		B039277B2EC4EEE200FDB6B4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B051A63F2EC616C6001BEB0E /* PianoViewModel.swift */,
+				B051A6412EC61726001BEB0E /* PianoKeyView.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B051A6362EC615ED001BEB0E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B051A6372EC6161C001BEB0E /* PianoKey.swift */,
+				B051A6392EC61646001BEB0E /* SoundGenerator.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B03927812EC4F07600FDB6B4 /* LevelSelectionView.swift in Sources */,
+				B051A6442EC61762001BEB0E /* PianoKeyboardView.swift in Sources */,
+				B051A6382EC6161C001BEB0E /* PianoKey.swift in Sources */,
 				B03927652EC4E53100FDB6B4 /* Persistence.swift in Sources */,
+				B051A63A2EC61646001BEB0E /* SoundGenerator.swift in Sources */,
+				B051A6462EC617B6001BEB0E /* PianoView.swift in Sources */,
 				B03927682EC4E53100FDB6B4 /* TuneIslan.xcdatamodeld in Sources */,
 				B039277F2EC4F04A00FDB6B4 /* LevelSelectionViewModel.swift in Sources */,
+				B051A6402EC616C6001BEB0E /* PianoViewModel.swift in Sources */,
+				B051A6422EC61726001BEB0E /* PianoKeyView.swift in Sources */,
 				B039277D2EC4EF7700FDB6B4 /* SplashView.swift in Sources */,
 				B039275E2EC4E53000FDB6B4 /* ContentView.swift in Sources */,
 				B039275C2EC4E53000FDB6B4 /* TuneIslanApp.swift in Sources */,

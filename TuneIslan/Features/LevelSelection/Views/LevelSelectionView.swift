@@ -67,8 +67,13 @@ struct LevelSelectionView: View {
         .navigationBarHidden(true)
         .statusBar(hidden: true)
         .fullScreenCover(isPresented: $viewModel.showPianoView) {
-            PianoPlaceholderView()
+            PianoView(level: viewModel.currentLevel.id)
         }
+        
+        
+//        .fullScreenCover(isPresented: $viewModel.showPianoView) {
+//            PianoPlaceholderView()
+//        }
     }
     
     // MARK: - Background Layer
