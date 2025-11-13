@@ -1,7 +1,8 @@
+//
 //  LevelSelectionView.swift
 //  TuneIsland
 //
-//  Enhanced for iPad Pro 12.9" Landscape Mode with bg_level1 image
+//  Enhanced for iPad Pro 12.9" Landscape Mode (ENGLISH VERSION)
 //
 
 import SwiftUI
@@ -48,7 +49,7 @@ struct LevelSelectionView: View {
                         // Real Piano Button
                         EnhancedPlayModeButton(
                             icon: "realPiano",
-                            title: "Play on My Real\nPiano",
+                            title: "Play on My\nReal Piano",
                             colors: [
                                 Color(red: 0.35, green: 0.75, blue: 1.0),
                                 Color(red: 0.55, green: 0.45, blue: 0.95)
@@ -67,13 +68,9 @@ struct LevelSelectionView: View {
         .navigationBarHidden(true)
         .statusBar(hidden: true)
         .fullScreenCover(isPresented: $viewModel.showPianoView) {
+            // Navigate to PianoView
             PianoView(level: viewModel.currentLevel.id)
         }
-        
-        
-//        .fullScreenCover(isPresented: $viewModel.showPianoView) {
-//            PianoPlaceholderView()
-//        }
     }
     
     // MARK: - Background Layer
@@ -82,9 +79,8 @@ struct LevelSelectionView: View {
             .resizable()
             .scaledToFill()
             .ignoresSafeArea()
-            .blur(radius: 3) // Slight blur to make UI elements pop
+            .blur(radius: 3)
             .overlay(
-                // Optional: Add slight dark overlay for better text contrast
                 Color.black.opacity(0.1)
                     .ignoresSafeArea()
             )
@@ -143,7 +139,7 @@ struct LevelSelectionView: View {
     // MARK: - Speech Bubble
     private var speechBubble: some View {
         VStack(spacing: 0) {
-            // Speech bubble pointer (triangle pointing up)
+            // Speech bubble pointer
             Triangle()
                 .fill(Color.white)
                 .frame(width: 30, height: 15)
@@ -163,13 +159,13 @@ struct LevelSelectionView: View {
                         .shadow(color: .black.opacity(0.2), radius: 10, x: 0, y: 5)
                 )
         }
-        .frame(maxWidth: 380)
+        .frame(maxWidth: 420)
         .padding(.horizontal, 20)
     }
     
     // MARK: - Character Image
     private var characterImage: some View {
-        Image("level_1") // Your Batman image
+        Image("level_1")
             .resizable()
             .scaledToFit()
             .frame(width: 320, height: 320)
@@ -177,7 +173,7 @@ struct LevelSelectionView: View {
     }
 }
 
-// MARK: - Enhanced Play Mode Button (Optimized for Landscape)
+// MARK: - Enhanced Play Mode Button
 struct EnhancedPlayModeButton: View {
     let icon: String
     let title: String
@@ -205,10 +201,10 @@ struct EnhancedPlayModeButton: View {
                     )
                 
                 VStack(spacing: 18) {
-                    // Icon (using SF Symbols as placeholder for piano icons)
+                    // Icon
                     Group {
                         if icon == "pianoKeys" {
-                            // Piano keyboard icon (white keys)
+                            // Piano keyboard icon
                             VStack(spacing: 3) {
                                 HStack(spacing: 4) {
                                     ForEach(0..<6) { _ in
@@ -225,7 +221,6 @@ struct EnhancedPlayModeButton: View {
                         } else {
                             // Microphone + Piano icon
                             HStack(spacing: 10) {
-                                // Microphone
                                 VStack(spacing: 3) {
                                     Capsule()
                                         .fill(Color.white)
@@ -236,7 +231,6 @@ struct EnhancedPlayModeButton: View {
                                         .cornerRadius(2)
                                 }
                                 
-                                // Piano
                                 VStack(spacing: 2) {
                                     HStack(spacing: 2) {
                                         ForEach(0..<4) { _ in
@@ -270,7 +264,7 @@ struct EnhancedPlayModeButton: View {
     }
 }
 
-// MARK: - Triangle Shape for Speech Bubble
+// MARK: - Triangle Shape
 struct Triangle: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
@@ -279,36 +273,5 @@ struct Triangle: Shape {
         path.addLine(to: CGPoint(x: rect.maxX, y: rect.minY))
         path.closeSubpath()
         return path
-    }
-}
-
-// MARK: - Piano Placeholder (temporary)
-struct PianoPlaceholderView: View {
-    @Environment(\.dismiss) var dismiss
-    
-    var body: some View {
-        ZStack {
-            Color.black.ignoresSafeArea()
-            
-            VStack(spacing: 30) {
-                Text("🎹 Piano View")
-                    .font(.system(size: 40, weight: .bold))
-                    .foregroundColor(.white)
-                
-                Text("Coming in next phase!")
-                    .font(.system(size: 20))
-                    .foregroundColor(.gray)
-                
-                Button("Go Back") {
-                    dismiss()
-                }
-                .font(.system(size: 18, weight: .semibold))
-                .foregroundColor(.white)
-                .padding(.horizontal, 40)
-                .padding(.vertical, 15)
-                .background(Color.blue)
-                .cornerRadius(10)
-            }
-        }
     }
 }
