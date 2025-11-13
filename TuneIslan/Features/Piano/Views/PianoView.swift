@@ -44,7 +44,7 @@ struct PianoView: View {
                     PianoKeyboardView(keys: viewModel.keys) { key in
                         viewModel.playKey(key)
                     }
-                    .padding(.bottom, 10)
+                    .padding(.bottom, 30)
                 }
             }
             .frame(width: geometry.size.width, height: geometry.size.height)
